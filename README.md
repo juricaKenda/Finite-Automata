@@ -10,8 +10,8 @@ A finite automaton has a set of states and its control which moves it from state
 In a nutshell, you now know a very loose definition of the Finite State Machine.
 ## Deterministic Finite Automata
 This subclass of finite automata is the one where each state combined with an external input, responds with exactly one output and that output is the next state of the automata.
-Personally, I like the light switch example to represent a DFA. If the current state is ON and you give it a certain input PRESS (in this case the only input), the DFA changes its state to OFF state. 
-All DFAs consist of : 
+Personally, I like the light switch example to represent a DFA. If the current state is ON and you give it a certain input PRESS (in this case the only input), the DFA changes its state to OFF state.   
+All DFAs consist of :   
 *A finite set of states (in the code denoted allStates)  
 *A finite set of input symbols (in the code sometimes manually checked, sometimes denoted allowedInputs)  
 *A transition function that will assing a next state to the current state, when a particular input arrives (in the code class is denoted TransitionFunction and a variable denoted delta)  
