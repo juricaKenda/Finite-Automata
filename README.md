@@ -12,12 +12,12 @@ In a nutshell, you now know a very loose definition of the Finite State Machine.
 This subclass of finite automata is the one where each state combined with an external input, responds with exactly one output and that output is the next state of the automata.
 Personally, I like the light switch example to represent a DFA. If the current state is ON and you give it a certain input PRESS (in this case the only input), the DFA changes its state to OFF state. 
 All DFAs consist of : 
-*A finite set of states (in the code denoted allStates)
-*A finite set of input symbols (in the code sometimes manually checked, sometimes denoted allowedInputs)
-*A transition function that will assing a next state to the current state, when a particular input arrives (in the code class is denoted TransitionFunction and a variable denoted delta)
-*A start state 
-*A set of accepting states 
-//TODO individual project readmes
+*A finite set of states (in the code denoted allStates)  
+*A finite set of input symbols (in the code sometimes manually checked, sometimes denoted allowedInputs)  
+*A transition function that will assing a next state to the current state, when a particular input arrives (in the code class is denoted TransitionFunction and a variable denoted delta)  
+*A start state   
+*A set of accepting states   
+//TODO individual project readmes  
 ## Prerequisites 
 
 ```
