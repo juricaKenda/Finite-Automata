@@ -17,7 +17,8 @@ Personally, I like the light switch example to represent a DFA. If the current s
 * A transition function that will assing a next state to the current state, when a particular input arrives (in the code class is denoted TransitionFunction and a variable denoted delta)  
 * A start state   
 * A set of accepting states   
-  
+## Parity DFA
+![](/Visuals/ParityDFA.png)
 ## Prerequisites 
 
 ```
@@ -29,6 +30,5 @@ Standard Java Libraries
 * **Jurica Kenda** - *Initial work* - [JuricaKenda](https://github.com/juricaKenda)
 
 ## License
-\par
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details\par
-}
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
