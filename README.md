@@ -4,7 +4,7 @@
 * The idea behind these subprojects is to truly understand the functioning of final state machines and get a peak under the hood of how more complex systems and programs (that use this kind of model) work
 * This repository is divided into more subfolders, each containing its own topic or automata that works in a particular manner
 * You will find detailed descriptions (including the visuals) in this README file (if you scroll low enough to find what you came for)
-![]()
+![](/Visuals/FSA.png)
 ## Brief background on Finite Automata
 A finite automaton has a set of states and its control which moves it from state to state in response to external inputs .  One of the crucial distinctions among classes of finite automata is whether that control is deterministic (meaning that the automaton cannot be in more than one state at any time)  or  nondeterministic ( meaning that it may be in several states at once/ NOT that we don't know the state it is going to go to). Most of the automata soultions and programs provided in this repository will be DFA or Deterministic Finite Automata.
 In a nutshell, you now know a very loose definition of the Finite State Machine.
