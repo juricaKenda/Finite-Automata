@@ -19,6 +19,21 @@ Personally, I like the light switch example to represent a DFA. If the current s
 * A set of accepting states   
 ## Parity DFA
 ![](/Visuals/ParityDFA.png)
+I believe it is important to start with a simple,direct (sometimes hardcoded) model and then to gradually expand the idea into a more general purpose program. That is why I decided to start with the implementation of a DFA that **checks for parity (of number one) in a given binary string.**  
+
+
+**This is what a translation of this program would sound in automata world:**
+* **Two states** -> **even parity** (accepted state) & **odd parity** (not accepted state)
+* **Only binary input** -> any combination of 1's and 0's
+* Assuming we start in the state that is the one of even parity, for **each input of '1'** we go to the **odd parity state**, from which we can **only get back** to the accepted state with **another input of 1**. For any **input zero**, we just **stay in the current state**, although those transitions should also be defined
+* **Start state** will be the **accepted state** (even parity)
+* A **set of accepting states** is a set containing **only one state (even parity state)**
+
+### Classes
+* **State class** - represents any state uniquely identified with a String 'name'; also referenced as a 'token' of that state when performing transitions (token = id = name)
+* **Transition Function class** - represents an entitiy that will be performing the transitions as inputs come along; it contains a HashMap that should have defined key-value pairs for any key(input+current state token) -> value (next state)
+
+
 ## Prerequisites 
 
 ```
