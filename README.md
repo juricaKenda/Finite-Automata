@@ -33,6 +33,19 @@ I believe it is important to start with a simple,direct (sometimes hardcoded) mo
 * **State class** - represents any state uniquely identified with a String 'name'; also referenced as a 'token' of that state when performing transitions (token = id = name)
 * **Transition Function class** - represents an entitiy that will be performing the transitions as inputs come along; it contains a HashMap that should have defined key-value pairs for any key(input+current state token) -> value (next state)
 
+## Double Parity DFA
+![](/Visuals/DoubleParityDFA.png)
+A bit more complex situation occures when we decide to build an automata that will check for both the parity of 1's and parity of 0's at the same time, given a binary string.Our number of total states grows exponentialy by a factor of two. Which does make sense when you think about it.  
+
+**This is what a translation of this program would sound in automata world:**
+* **Four states** -> **even-even parity** (accepted state),**even-odd parity** (not accepted state),**odd-even parity** (not accepted state), & **odd-odd parity** (not accepted state)
+* **Only binary input** -> any combination of 1's and 0's
+* Transition work exactly like the ones in the previous example, with first parity defining the parity of zeros. So, even-odd state defines even number of 0's and odd number of 1's. Being in that state and given an input of 1, we would transition to even-even state. Same logic applies to all states.
+* **Start state** will be the **accepted state** (even-even parity)
+* A **set of accepting states** is a set containing **only one state (even-even parity state)**
+
+### Classes
+We use exactly the same classes as the previous example. Only there are more states and transition definitions this time.
 
 ## Prerequisites 
 
