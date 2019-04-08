@@ -45,6 +45,14 @@ public class RegexDFA {
 			char transition = regex.charAt(eachIndex);
 			delta.define(from.getToken()+transition, to);
 		}
+		
+		//Map the return to state one when regular expression starts but does not reach the end
+		State to = allStates.get(1); //this is the first relevant state
+		char transition = regex.charAt(0); // this is the transition cue
+		for(int eachIndex=1; eachIndex < connectionNum; eachIndex++) {
+			State from = allStates.get(eachIndex);
+			delta.define(from.getToken()+transition, to);
+		}
 
 		//Only put the final state as the allowed state
 		allowedStates = new ArrayList<>();
