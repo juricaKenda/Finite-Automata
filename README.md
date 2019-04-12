@@ -47,6 +47,18 @@ A bit more complex situation occures when we decide to build an automata that wi
 ### Classes
 We use exactly the same classes as the previous example. Only there are more states and transition definitions this time.
 
+
+## Regular Expression Automaton
+Regular expressions are very interesting topic to dive into and explore. They provide a variety of applications if used properly and in a smart way. In this section, I will briefly explain how regular expressions work and what sorts of problems you might solve using them.  
+A regular expression, also called **regex**, is usually thought of as a sequence of characters in a string or a text. The concept arose in the 1950s when the American mathematician Stephen Cole Kleene formalized the description of a regular language. Regular expressions are meant to search for patterns, and therefore they have to be implemented to perform some sort of procedural scan of the entire input text.  
+* In this project, I made an automaton that is able to find a given combination of characters in a bigger input string. Given a set of characters, this automaton will create exactly as much states as there are characters plus one extra state for the start state. Each state represents a separate character.  
+Each state also defines the transition to the next state, for a "correct" input.  
+* To explain a bit better, if we are looking to create an automaton that will search for a pattern **"ABC", we need to create three states, state A,state B and state C. The start state represents any state that is not defined in our pattern.**  
+* Now we have to **define mappings (transitions) between our states**. Start state has only two possible transitions, first one is a transition to the first state of the pattern (in this case state A), which occurrs give the input A, and a transition to itself for any other input.  
+* State A (first state of the pattern) will have transition to State B, when input B occurs and we are already in State A. It will also have transition to the start State for any other input.  
+* All other states are mapped in a similar manner, only they also have to contain a transition to the first State of the pattern, in case we enter the lookup process and start anoter one midway through.  
+* Only the last state in the automaton will be accepted!
+
 ## Prerequisites 
 
 ```
