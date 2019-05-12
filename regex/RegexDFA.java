@@ -83,6 +83,7 @@ public class RegexDFA {
 		return doubleStates;
 	}
 		
+	//Perform the running through the inputs
 	public void run(String input) {
 		for(int each=0; each<input.length(); each++) {
 			Character currentInput = input.charAt(each);
